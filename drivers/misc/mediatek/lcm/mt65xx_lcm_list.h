@@ -7,6 +7,8 @@
 extern LCM_DRIVER lcm_common_drv;
 #else
 
+extern LCM_DRIVER nt35521_dsi_vdo_yushun_cmi_hd720_lcm_drv;
+extern LCM_DRIVER hx8394d_dsi_vdo_hlt_hsd_hd720_lcm_drv;
 extern LCM_DRIVER hct_otm1285a_dsi_vdo_hd_boe;
 extern LCM_DRIVER hct_otm1282a_dsi_vdo_hd_auo;
 extern LCM_DRIVER hct_ili9881_dsi_vdo_hd_cpt;
