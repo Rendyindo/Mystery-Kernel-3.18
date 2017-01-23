@@ -120,4 +120,17 @@ config TOUCHSCREEN_MTK_FT5X0X
 
 source "drivers/input/touchscreen/mediatek/ft5x0x/Kconfig"
 
+config TOUCHSCREEN_MTK_GT9XX
+	bool "GT9XX for Mediatek package"
+	default n
+	help
+	  Say Y here if you have GT9XX touch panel.
+
+	  If unsure, say N.
+
+	  To compile this dirver as a module, choose M here: the
+	  module will be called.
+
+source "drivers/input/touchscreen/mediatek/GT9XX/Kconfig"
+
 endif
