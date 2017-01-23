@@ -18,6 +18,29 @@
  * Release Date: 2014/11/28
  */
 
+#include "tpd.h"
+#define GUP_FW_INFO
+
+#ifdef TPD_PROXIMITY
+#include <linux/hwmsensor.h>
+#include <linux/hwmsen_dev.h>
+#include <linux/sensors_io.h>
+#endif
+#if GTP_SUPPORT_I2C_DMA
+#include <linux/dma-mapping.h>
+#endif
+#include <linux/proc_fs.h>	/*proc */
+#if (GTP_SCP_GESTURE_WAKEUP)
+#include <mach/md32_ipi.h>
+#include <mach/md32_helper.h>
+#endif
+#ifdef CONFIG_OF
+#include <linux/of.h>
+#include <linux/of_address.h>
+#include <linux/of_irq.h>
+#endif
+#include <linux/sched.h>
+
 #include <linux/irq.h>
 #include "gt9xx.h"
 
@@ -3064,7 +3087,7 @@ Input:
     None.
 Output:
     Executive Outcomes. 0---succeed.
-********************************************************/
+********************************************************
 static int __devinit goodix_ts_init(void)
 {
     s32 ret;
@@ -3092,7 +3115,7 @@ Input:
     None.
 Output:
     Executive Outcomes. 0---succeed.
-********************************************************/
+********************************************************
 static void __exit goodix_ts_exit(void)
 {
     GTP_DEBUG_FUNC();
@@ -3106,6 +3129,6 @@ static void __exit goodix_ts_exit(void)
 
 module_init(goodix_ts_init);
 module_exit(goodix_ts_exit);
-
+*/
 MODULE_DESCRIPTION("GTP Series Driver");
 MODULE_LICENSE("GPL");

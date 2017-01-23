@@ -18,6 +18,20 @@
  * Release Date: 2014/11/28
  */
 
+#include "tpd.h"
+#include <linux/interrupt.h>
+#include <linux/i2c.h>
+#include <linux/sched.h>
+#include <linux/kthread.h>
+#include <linux/rtpm_prio.h>
+#include <linux/wait.h>
+#include <linux/time.h>
+#include <linux/delay.h>
+#include <linux/namei.h>
+#include <linux/mount.h>
+#include <asm/uaccess.h>
+#define GUP_FW_INFO
+
 #include <linux/kthread.h>
 #include "gt9xx.h"
 
