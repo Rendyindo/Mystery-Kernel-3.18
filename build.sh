@@ -4,8 +4,6 @@
 
 mkdir -p out
 
-#Change toolchain path before using build script!
-#export CROSS_COMPILE=~/toolchains/arm-eabi-linaro-4.7.3/bin/arm-eabi-
 
 #Enable only when needed:
 #export USE_CCACHE=1
